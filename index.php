@@ -50,10 +50,24 @@
         ],
 
     ];
+    $hotelsWithParking = [
+
+    ];
+
 ?>
+
+<form action="./index.php" method="GET">
+    <label for="isThereParking">
+        Check if parking in the hotel is present: type 'true or false'
+    </label>
+    <input type="text" name="isThereParking" id="isThereParking">
+    <input type="submit" value="check">
+</form>   
+
 
 <ul>
     <?php foreach ($hotels as $singleHotel){?>
+        
       <li>
         <?php echo $singleHotel['name'] . ' ' ; ?>
         <?php echo $singleHotel['description'] . ' ' ; ?>
@@ -63,8 +77,6 @@
       </li>
 
     <?php } ?>
-
-
 </ul>
     
 </body>
